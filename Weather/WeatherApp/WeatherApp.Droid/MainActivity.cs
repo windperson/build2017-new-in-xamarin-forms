@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Widget;
 using Android.OS;
 using Android.Support.V4.App;
@@ -16,7 +17,7 @@ using View = Android.Views.View;
 
 namespace WeatherApp.Droid
 {
-	[Activity(Label = "Sample Weather App", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity(Label = "Sample Weather App", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait, Icon = "@drawable/icon")]
 	public class MainActivity : FragmentActivity
 	{
 		private Fragment _history;

@@ -60,7 +60,7 @@ namespace Weather.Forms
 			new HistoryItem(DateTime.Now.AddHours(-2), "63101", "Saint Louis", "day800"),
 			new HistoryItem(DateTime.Now.AddHours(-1), "02110", "Boston", "day800"),
 			new HistoryItem(DateTime.Now.AddMinutes(-42), "80203", "Denver", "day800"),
-		};
+        };
 
         void AddHistory(HistoryItem historyItem)
         {
