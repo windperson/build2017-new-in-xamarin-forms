@@ -17,7 +17,7 @@ using View = Android.Views.View;
 
 namespace WeatherApp.Droid
 {
-	[Activity(Label = "Sample Weather App", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait, Icon = "@drawable/icon")]
+	[Activity(Label = "Sample Weather App", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : FragmentActivity
 	{
 		private Fragment _history;
@@ -79,7 +79,7 @@ namespace WeatherApp.Droid
 				// Listen for lookup requests from the history tracker
 				MessagingCenter.Subscribe<HistoryPage, string>(this, HistoryPage.HistoryItemSelected, (history, postalCode) =>
 				{
-					Activity.FragmentManager.PopBackStack();
+					Activity?.FragmentManager?.PopBackStack();
 					_lastPostalCode = postalCode;
 				});
 
